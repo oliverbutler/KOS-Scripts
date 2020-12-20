@@ -111,7 +111,7 @@ print "Creating circularization node".
 local circularizationNode to circularizeAtApoapsis(apoapsis, time:seconds + eta:apoapsis).
 add circularizationNode.
 
-executeNode(circularizationNode).
+executeNode().
 
 remove circularizationNode.
 
