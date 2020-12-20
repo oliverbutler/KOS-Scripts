@@ -68,7 +68,7 @@ function executeNode {
   // Warp closer
   if(nd:eta - burnStats[1] > 30) {
     hudtext("Node: Warping closer", 3, 2, 30, green, false).
-    kuniverse:timewarp:warpto(time:seconds + nd:eta - burnStats[1] - 60).
+    kuniverse:timewarp:warpto(time:seconds + nd:eta - burnStats[1] - 10). // todo make this based on vessel turning authority
   }
 
   // Wait until burn

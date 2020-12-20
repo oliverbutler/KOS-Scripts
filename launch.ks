@@ -10,7 +10,7 @@ clearScreen.
 // Variables
 local targetApoapsis to 100000.
 local gTurnStart to 1000.
-local gTurnEnd to 70000.
+local gTurnEnd to 80000.
 
 local minSpeed to 250. // speed at the start
 local maxSpeed to 1000.  // speed at the height max (normally atmosphere top)
@@ -31,6 +31,7 @@ when maxThrust = 0 then {
   print "Staging".
   stage.
   preserve.
+  wait 1.
 }
 
 
@@ -53,7 +54,7 @@ local pid is pidLoop(Kp, Ki, Kd, 0, 1).
 
 // Gravity Turn
 
-until apoapsis > targetApoapsis + 1000 {
+until apoapsis > targetApoapsis + 100 {
 
   local progress is (altitude - gTurnStart) / (gTurnEnd - gTurnStart).
   set sVal to heading(90, min(90 - (-90 * progress * (progress -2 )), 90)).
