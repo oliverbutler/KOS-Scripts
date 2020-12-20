@@ -44,7 +44,7 @@ function parseDeltaV {
     }
 
     // To get the engine thrust kOS has to shortly activate every engine.
-    LOCK throttle TO 0.             // Stops all engines while measuring deltaV
+    set tVal TO 0.             // Stops all engines while measuring deltaV
 
 
     FOR stageNum in stageEngineDict:KEYS
