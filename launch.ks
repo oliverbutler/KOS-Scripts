@@ -17,12 +17,7 @@ local maxSpeed to 1000.  // speed at the height max (normally atmosphere top)
 local maxSpeedHeight to 30000. // Try to hit the maxspeed at this height
 
 
-//This is our countdown loop, which cycles from 10 to 0
-print "Counting down:".
-from {local countdown is 5.} until countdown = 0 step {set countdown to countdown - 1.} do {
-    print "..." + countdown.
-    wait 1. // pauses the script here for 1 second.
-}
+
 
 lock steering to up.
 

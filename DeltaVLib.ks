@@ -1,5 +1,7 @@
 @LAZYGLOBAL OFF.
 
+// Author https://github.com/ScranchNew/kOS-Launch-Scripts
+
 function parseDeltaV {
 // Parses the whole craft for engines, fuel, mass, etc. and calculates deltaV per stage
 // Does not work if you mix different fuel types being burned in one stage

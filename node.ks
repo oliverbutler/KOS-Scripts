@@ -4,8 +4,8 @@ run utils.
 
 // test 123
 function circularizeAtApoapsis {
-  parameter targetApoapsis.
-  parameter nodeETA.
+  parameter targetApoapsis is apoapsis.
+  parameter nodeETA is time:seconds + eta:apoapsis.
 
   return makeNode(targetApoapsis, targetApoapsis, nodeETA).
 }
@@ -49,8 +49,6 @@ function executeTest {
 // Executes the next node
 function executeNode {
   
-  clearScreen.
-
   local nd is nextNode.
 
   set sVal to nd:deltav.
@@ -63,7 +61,6 @@ function executeNode {
 
   // Uses DeltaVLib, I will make my own once I have a better grasp of the language.
   local burnStats is calcBurnMean(nd:deltav:mag).
-  print burnStats.
 
   // Warp closer
   if(nd:eta - burnStats[1] > 30) {
@@ -78,10 +75,12 @@ function executeNode {
 
     if nd:eta <= burnStats[1] / 2.0 {
       hudtext("Node: Beginning burn!", 3, 2, 30, green, false).
-      clearScreen.
       break.
     }
   }
+
+  clear_line(0).
+  clear_line(1).
 
   // Actually do the burn
   local nodeDone is false.
@@ -118,5 +117,8 @@ function executeNode {
     printVal("Remaning dV", nd:deltav:mag, 0, 1).
     printVal("vdot", vdot(dv0, nd:deltav), 1, 1).
   }
+
+  clear_line(0).
+  clear_line(1).
 
 }

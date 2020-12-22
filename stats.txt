@@ -1,0 +1,47 @@
+// Enable engine preheating
+local engine_preheating is true.
+
+// Takeoff speed
+local takeoff_speed is 120.
+
+// Initial ascent (0m - target_altitude)
+local initial_pitch is 14.
+
+// crusing altitude (where we gain most of our speed)
+local crusing_altitude is 13000.
+
+// crusing speed for the target_altitude
+local crusing_speed is 1400.
+
+// Final ascent pitch
+local final_pitch is 20.
+
+// Target apoapsis
+local target_apoapsis is 80000.
+
+
+-217
+
+
+// Enable engine preheating
+local engine_preheating is true.
+
+// Takeoff speed
+local takeoff_speed is 120.
+
+// Initial ascent (0m - target_altitude)
+local initial_pitch is 14.
+
+// crusing altitude (where we gain most of our speed)
+local crusing_altitude is 13000.
+
+// crusing speed for the target_altitude
+local crusing_speed is 1400.
+
+// Final ascent pitch
+local final_pitch is 24.
+
+// Target apoapsis
+local target_apoapsis is 80000.
+
+-158
